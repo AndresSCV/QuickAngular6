@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./estudiante.component.css']
 })
 export class EstudianteComponent {
-	public titulo: string = '';
-  	public listado: string = '';
+	public titulo: string = 'Este es el titulo';
+  	public listado: string = 'Este el el parrafajito';
    
 }
