@@ -6,7 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./estudiante.component.css']
 })
 export class EstudianteComponent {
-	public titulo: string = 'Este es el titulo';
-  	public listado: string = 'Este el el parrafajito';
+
+	public nombre: string;
+	public costo: number;
+	public duracionEnHoras: number;
    
+    constructor(){
+        this.nombre = 'Programacion web';
+        this.costo = 100000;
+        this.duracionEnHoras = 12;
+        console.log(this);
+    }   
 }

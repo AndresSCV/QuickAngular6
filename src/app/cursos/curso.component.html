@@ -1,0 +1,37 @@
+<h2>Cursos</h2>
+<hr />
+<div>
+    <h3>Docente:</h3>
+    <label>{{docente.nombre}} {{docente.apellido}}</label>
+</div>
+<div>
+    <h3>Honorarios:</h3>
+    <label>{{docente.honorarios}}</label>
+</div>
+<div>
+    <h3>Estudiantes Matriculados</h3>
+    <table border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Intercambio</th>
+        </tr>
+        <tr *ngFor="let estudiante of estudiantes">
+            <td>{{estudiante.nombre}}</td>
+            <td>{{estudiante.apellido}}</td>
+            <td>{{estudiante.intercambio ? 'Si': 'No'}}</td>
+        </tr>
+    </table>
+</div>
+<br>
+<div>
+    <strong>Nombre:</strong>
+    <input name="nombre" [(ngModel)]="nombre" type="text" />
+</div>
+<div>
+    <strong>Apellido:</strong>
+    <input name="apellido" [(ngModel)]="apellido" type="text" />
+</div>
+<div>
+    <button (click)="matricularEstudiante()">Matricular</button>
+</div>
